@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="forms">
+        <form id="addOrderForm">
+          <label for="name">Namn: </label>
+          <input type="text" id="name" required />
+          <label for="address">Address: </label>
+          <input type="text" id="address" required />
+          <button type="submit">Lägg till beställning</button>
+        </form>
+
+        <form id="searchOrder">
+          <label for="id">Id: </label>
+          <input type="text" id="id" required />
+          <button type="submit">Sök beställning</button>
+        </form>
+
+        <form id="readOrders">
+          <button type="submit">Se alla beställningar</button>
+        </form>
+      </div>
+
+      <ul id="orders"></ul>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
