@@ -26,8 +26,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+ /* min-width: 320px;
+  min-height: 100vh;*/
 }
 
 h1 {
@@ -67,6 +67,7 @@ p, h3{
 }
 li{
   text-decoration: none;
+  list-style: none;
 }
 
 
@@ -133,3 +134,32 @@ padding: 20px;
     background-color: #f9f9f9;
   }
 }
+@media (max-width: 768px) {
+
+  #app {
+    padding: 1rem;
+  }
+
+  .row1,
+  .row2,
+  #addOrderForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input,
+  button,
+  select {
+    width: 100%;
+  }
+
+  .infoDiv {
+    max-width: 100%;
+  }
+
+}
+
+
+
+
+
