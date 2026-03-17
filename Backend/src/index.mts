@@ -13,10 +13,28 @@ if (MONGO_URL === "") {
   throw Error("No valid mongo url is in .env");
 }
 const app = express();
-
+/*
 app.use(
   cors({
     origin: "http://localhost:5173",
+   
+  }),
+);*/
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://the-crud-api-frontend.onrender.com",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // tillåt t.ex. Postman eller curl
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const msg = "CORS-policy: Denna origin är inte tillåten.";
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
   }),
 );
 
