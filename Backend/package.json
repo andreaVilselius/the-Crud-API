@@ -12,7 +12,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tsx watch src/index.mts"
+    "dev": "npx tsx watch src/index.mts",
+    "start": "npx tsx src/index.mts"
   },
   "dependencies": {
     "cors": "^2.8.6",
